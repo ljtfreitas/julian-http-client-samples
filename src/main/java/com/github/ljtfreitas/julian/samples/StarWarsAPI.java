@@ -1,7 +1,7 @@
 package com.github.ljtfreitas.julian.samples;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.github.ljtfreitas.julian.Except;
+import com.github.ljtfreitas.julian.Attempt;
 import com.github.ljtfreitas.julian.Promise;
 import com.github.ljtfreitas.julian.contract.Callback;
 import com.github.ljtfreitas.julian.contract.GET;
@@ -38,10 +38,10 @@ interface StarWarsAPI {
     CompletableFuture<Person> onePeopleAsFuture(@Path int id);
 
     @GET("/people/{id}")
-    Promise<Person, HTTPException> onePeopleAsPromise(@Path int id);
+    Promise<Person> onePeopleAsPromise(@Path int id);
 
     @GET("/people/{id}")
-    Except<Person> onePeopleAsExcept(@Path int id);
+    Attempt<Person> onePeopleAsExcept(@Path int id);
 
     @GET("/people/{id}")
     HTTPResponse<Person> onePeopleAsHTTPResponse(@Path int id);

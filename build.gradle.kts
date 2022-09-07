@@ -20,8 +20,8 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("com.github.ljtfreitas.julian-http-client:julian-http-client-core:0.0.1-SNAPSHOT")
-    implementation("com.github.ljtfreitas.julian-http-client:julian-http-client-json-jackson:0.0.1-SNAPSHOT")
+    implementation("com.github.ljtfreitas.julian-http-client:julian-http-client-core:0.0.7-SNAPSHOT")
+    implementation("com.github.ljtfreitas.julian-http-client:julian-http-client-json-jackson:0.0.7-SNAPSHOT")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.0")
     implementation("org.mock-server:mockserver-netty:5.11.1")

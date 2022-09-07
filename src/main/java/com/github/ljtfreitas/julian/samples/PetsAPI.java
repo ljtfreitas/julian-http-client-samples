@@ -1,6 +1,6 @@
 package com.github.ljtfreitas.julian.samples;
 
-import com.github.ljtfreitas.julian.Except;
+import com.github.ljtfreitas.julian.Attempt;
 import com.github.ljtfreitas.julian.Promise;
 import com.github.ljtfreitas.julian.contract.Body;
 import com.github.ljtfreitas.julian.contract.GET;
@@ -31,10 +31,10 @@ interface PetsAPI {
     CompletableFuture<Pet> onePetAsFuture(@Path int id);
 
     @GET("/pets/{id}")
-    Promise<Pet, HTTPException> onePetAsPromise(@Path int id);
+    Promise<Pet> onePetAsPromise(@Path int id);
 
     @GET("/pets/{id}")
-    Except<Pet> onePetAsExcept(@Path int id);
+    Attempt<Pet> onePetAsExcept(@Path int id);
 
     @GET("/pets/{id}")
     HTTPResponse<Pet> onePetAsHTTPResponse(@Path int id);

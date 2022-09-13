@@ -1,0 +1,4 @@
+julian-http-client:
+  httpBin:
+    base-url: https://httpbin.org
+    debug-enabled: true
